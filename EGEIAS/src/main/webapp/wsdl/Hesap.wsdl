@@ -2,14 +2,811 @@
 <wsdl:definitions targetNamespace="http://canias" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://canias" xmlns:intf="http://canias" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 <!--WSDL created by Apache Axis version: 1.4
 Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://canias" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="OLCHATA">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="OLCHATAResponse">
+    <complexType>
+     <sequence>
+      <element name="OLCHATAReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="REFKAYMA">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="REFKAYMAResponse">
+    <complexType>
+     <sequence>
+      <element name="REFKAYMAReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="BIRLESHATA">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="BIRLESHATAResponse">
+    <complexType>
+     <sequence>
+      <element name="BIRLESHATAReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TEKRAR">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TEKRARResponse">
+    <complexType>
+     <sequence>
+      <element name="TEKRARReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="SICFARKI">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="SICFARKIResponse">
+    <complexType>
+     <sequence>
+      <element name="SICFARKIReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="dagilim">
+    <complexType>
+     <sequence>
+      <element name="dagilimname" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="dagilimResponse">
+    <complexType>
+     <sequence>
+      <element name="dagilimReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TESTOKUHATA">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TESTOKUHATAResponse">
+    <complexType>
+     <sequence>
+      <element name="TESTOKUHATAReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="REFBEL">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="REFBELResponse">
+    <complexType>
+     <sequence>
+      <element name="REFBELReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TESTSIFIR">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TESTSIFIRResponse">
+    <complexType>
+     <sequence>
+      <element name="TESTSIFIRReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="SICFARKITESTREF">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="SICFARKITESTREFResponse">
+    <complexType>
+     <sequence>
+      <element name="SICFARKITESTREFReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="genisHesap">
+    <complexType>
+     <sequence>
+      <element name="obhtype" type="xsd:string"/>
+      <element name="obhno" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="genisHesapResponse">
+    <complexType>
+     <sequence>
+      <element name="genisHesapReturn" type="impl:GenisHesap"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="GenisHesap">
+    <sequence>
+     <element name="BIRLESHATA" type="xsd:double"/>
+     <element name="EXPUNCER" type="xsd:double"/>
+     <element name="OLCHATA" type="xsd:double"/>
+     <element name="REFBEL" type="xsd:double"/>
+     <element name="REFKAYMA" type="xsd:double"/>
+     <element name="SICFARKI" type="xsd:double"/>
+     <element name="SICFARKITESTREF" type="xsd:double"/>
+     <element name="STDUNCER" type="xsd:double"/>
+     <element name="TEKRAR" type="xsd:double"/>
+     <element name="TESTOKUHATA" type="xsd:double"/>
+     <element name="TESTSIFIR" type="xsd:double"/>
+     <element name="TVARYANS" type="xsd:double"/>
+    </sequence>
+   </complexType>
+   <element name="TVARYANS">
+    <complexType>
+     <sequence>
+      <element name="degerler" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TVARYANSResponse">
+    <complexType>
+     <sequence>
+      <element name="TVARYANSReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="main">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="args" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="mainResponse">
+    <complexType/>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="SICFARKITESTREFRequest">
+
+      <wsdl:part element="impl:SICFARKITESTREF" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="genisHesapRequest">
+
+      <wsdl:part element="impl:genisHesap" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="genisHesapResponse">
+
+      <wsdl:part element="impl:genisHesapResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="BIRLESHATAResponse">
+
+      <wsdl:part element="impl:BIRLESHATAResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="SICFARKIRequest">
+
+      <wsdl:part element="impl:SICFARKI" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="TESTOKUHATAResponse">
+
+      <wsdl:part element="impl:TESTOKUHATAResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="SICFARKITESTREFResponse">
+
+      <wsdl:part element="impl:SICFARKITESTREFResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="SICFARKIResponse">
+
+      <wsdl:part element="impl:SICFARKIResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="mainRequest">
+
+      <wsdl:part element="impl:main" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="TVARYANSRequest">
+
+      <wsdl:part element="impl:TVARYANS" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="dagilimResponse">
+
+      <wsdl:part element="impl:dagilimResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="REFKAYMAResponse">
+
+      <wsdl:part element="impl:REFKAYMAResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="TEKRARResponse">
+
+      <wsdl:part element="impl:TEKRARResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="TEKRARRequest">
+
+      <wsdl:part element="impl:TEKRAR" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="OLCHATAResponse">
+
+      <wsdl:part element="impl:OLCHATAResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="REFBELResponse">
+
+      <wsdl:part element="impl:REFBELResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="TESTOKUHATARequest">
+
+      <wsdl:part element="impl:TESTOKUHATA" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="TESTSIFIRRequest">
+
+      <wsdl:part element="impl:TESTSIFIR" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="dagilimRequest">
+
+      <wsdl:part element="impl:dagilim" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="REFBELRequest">
+
+      <wsdl:part element="impl:REFBEL" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="REFKAYMARequest">
+
+      <wsdl:part element="impl:REFKAYMA" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="TESTSIFIRResponse">
+
+      <wsdl:part element="impl:TESTSIFIRResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="mainResponse">
+
+      <wsdl:part element="impl:mainResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="OLCHATARequest">
+
+      <wsdl:part element="impl:OLCHATA" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="BIRLESHATARequest">
+
+      <wsdl:part element="impl:BIRLESHATA" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="TVARYANSResponse">
+
+      <wsdl:part element="impl:TVARYANSResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
 
    <wsdl:portType name="Hesap">
+
+      <wsdl:operation name="OLCHATA">
+
+         <wsdl:input message="impl:OLCHATARequest" name="OLCHATARequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:OLCHATAResponse" name="OLCHATAResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="REFKAYMA">
+
+         <wsdl:input message="impl:REFKAYMARequest" name="REFKAYMARequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:REFKAYMAResponse" name="REFKAYMAResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="BIRLESHATA">
+
+         <wsdl:input message="impl:BIRLESHATARequest" name="BIRLESHATARequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:BIRLESHATAResponse" name="BIRLESHATAResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="TEKRAR">
+
+         <wsdl:input message="impl:TEKRARRequest" name="TEKRARRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:TEKRARResponse" name="TEKRARResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="SICFARKI">
+
+         <wsdl:input message="impl:SICFARKIRequest" name="SICFARKIRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:SICFARKIResponse" name="SICFARKIResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="dagilim">
+
+         <wsdl:input message="impl:dagilimRequest" name="dagilimRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:dagilimResponse" name="dagilimResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="TESTOKUHATA">
+
+         <wsdl:input message="impl:TESTOKUHATARequest" name="TESTOKUHATARequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:TESTOKUHATAResponse" name="TESTOKUHATAResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="REFBEL">
+
+         <wsdl:input message="impl:REFBELRequest" name="REFBELRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:REFBELResponse" name="REFBELResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="TESTSIFIR">
+
+         <wsdl:input message="impl:TESTSIFIRRequest" name="TESTSIFIRRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:TESTSIFIRResponse" name="TESTSIFIRResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="SICFARKITESTREF">
+
+         <wsdl:input message="impl:SICFARKITESTREFRequest" name="SICFARKITESTREFRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:SICFARKITESTREFResponse" name="SICFARKITESTREFResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="genisHesap">
+
+         <wsdl:input message="impl:genisHesapRequest" name="genisHesapRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:genisHesapResponse" name="genisHesapResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="TVARYANS">
+
+         <wsdl:input message="impl:TVARYANSRequest" name="TVARYANSRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:TVARYANSResponse" name="TVARYANSResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="main">
+
+         <wsdl:input message="impl:mainRequest" name="mainRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:mainResponse" name="mainResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
 
    </wsdl:portType>
 
    <wsdl:binding name="HesapSoapBinding" type="impl:Hesap">
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="OLCHATA">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="OLCHATARequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="OLCHATAResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="REFKAYMA">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="REFKAYMARequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="REFKAYMAResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="BIRLESHATA">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="BIRLESHATARequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="BIRLESHATAResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="TEKRAR">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="TEKRARRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="TEKRARResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="SICFARKI">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="SICFARKIRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="SICFARKIResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="dagilim">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="dagilimRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="dagilimResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="TESTOKUHATA">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="TESTOKUHATARequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="TESTOKUHATAResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="REFBEL">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="REFBELRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="REFBELResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="TESTSIFIR">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="TESTSIFIRRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="TESTSIFIRResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="SICFARKITESTREF">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="SICFARKITESTREFRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="SICFARKITESTREFResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="genisHesap">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="genisHesapRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="genisHesapResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="TVARYANS">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="TVARYANSRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="TVARYANSResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="main">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="mainRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="mainResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
 
    </wsdl:binding>
 

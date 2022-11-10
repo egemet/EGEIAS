@@ -12,14 +12,63 @@
 
   <!-- Services from HesapService WSDL service -->
 
-  <service name="Hesap" provider="java:RPC" style="document" use="encoded">
+  <service name="Hesap" provider="java:RPC" style="wrapped" use="literal">
       <parameter name="wsdlTargetNamespace" value="http://canias"/>
       <parameter name="wsdlServiceElement" value="HesapService"/>
+      <parameter name="schemaQualified" value="http://canias"/>
       <parameter name="wsdlServicePort" value="Hesap"/>
       <parameter name="className" value="canias.HesapSoapBindingImpl"/>
       <parameter name="wsdlPortType" value="Hesap"/>
       <parameter name="typeMappingVersion" value="1.2"/>
-      <parameter name="allowedMethods" value="*"/>
+      <operation name="OLCHATA" qname="operNS:OLCHATA" xmlns:operNS="http://canias" returnQName="retNS:OLCHATAReturn" xmlns:retNS="http://canias" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:bolen" xmlns:pns="http://canias" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="REFKAYMA" qname="operNS:REFKAYMA" xmlns:operNS="http://canias" returnQName="retNS:REFKAYMAReturn" xmlns:retNS="http://canias" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:bolen" xmlns:pns="http://canias" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="BIRLESHATA" qname="operNS:BIRLESHATA" xmlns:operNS="http://canias" returnQName="retNS:BIRLESHATAReturn" xmlns:retNS="http://canias" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:bolen" xmlns:pns="http://canias" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="TEKRAR" qname="operNS:TEKRAR" xmlns:operNS="http://canias" returnQName="retNS:TEKRARReturn" xmlns:retNS="http://canias" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:bolen" xmlns:pns="http://canias" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="SICFARKI" qname="operNS:SICFARKI" xmlns:operNS="http://canias" returnQName="retNS:SICFARKIReturn" xmlns:retNS="http://canias" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:bolen" xmlns:pns="http://canias" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="dagilim" qname="operNS:dagilim" xmlns:operNS="http://canias" returnQName="retNS:dagilimReturn" xmlns:retNS="http://canias" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:dagilimname" xmlns:pns="http://canias" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="TESTOKUHATA" qname="operNS:TESTOKUHATA" xmlns:operNS="http://canias" returnQName="retNS:TESTOKUHATAReturn" xmlns:retNS="http://canias" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:bolen" xmlns:pns="http://canias" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="REFBEL" qname="operNS:REFBEL" xmlns:operNS="http://canias" returnQName="retNS:REFBELReturn" xmlns:retNS="http://canias" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:bolen" xmlns:pns="http://canias" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="TESTSIFIR" qname="operNS:TESTSIFIR" xmlns:operNS="http://canias" returnQName="retNS:TESTSIFIRReturn" xmlns:retNS="http://canias" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:bolen" xmlns:pns="http://canias" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="SICFARKITESTREF" qname="operNS:SICFARKITESTREF" xmlns:operNS="http://canias" returnQName="retNS:SICFARKITESTREFReturn" xmlns:retNS="http://canias" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:bolen" xmlns:pns="http://canias" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="genisHesap" qname="operNS:genisHesap" xmlns:operNS="http://canias" returnQName="retNS:genisHesapReturn" xmlns:retNS="http://canias" returnType="rtns:GenisHesap" xmlns:rtns="http://canias" soapAction="" >
+        <parameter qname="pns:obhtype" xmlns:pns="http://canias" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:obhno" xmlns:pns="http://canias" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="TVARYANS" qname="operNS:TVARYANS" xmlns:operNS="http://canias" returnQName="retNS:TVARYANSReturn" xmlns:retNS="http://canias" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:degerler" xmlns:pns="http://canias" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="main" qname="operNS:main" xmlns:operNS="http://canias" soapAction="" >
+        <parameter qname="pns:args" xmlns:pns="http://canias" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="OLCHATA dagilim REFKAYMA SICFARKITESTREF main BIRLESHATA REFBEL TESTOKUHATA TEKRAR TESTSIFIR TVARYANS genisHesap SICFARKI"/>
 
+      <typeMapping
+        xmlns:ns="http://canias"
+        qname="ns:GenisHesap"
+        type="java:canias.GenisHesap"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
   </service>
 </deployment>
