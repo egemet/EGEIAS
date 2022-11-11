@@ -7,8 +7,8 @@
   <ns1:parameter name="dotNetSoapEncFix" value="true"/>
   <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
   <ns1:parameter name="sendXMLDeclaration" value="true"/>
-  <ns1:parameter name="sendXsiTypes" value="true"/>
   <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <ns1:parameter name="sendXsiTypes" value="true"/>
   <ns1:requestFlow>
    <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
     <ns1:parameter name="scope" value="session"/>
@@ -28,12 +28,16 @@
   <ns1:parameter name="className" value="org.apache.axis.utils.Admin"/>
   <ns1:namespace>http://xml.apache.org/axis/wsdd/</ns1:namespace>
  </ns1:service>
- <ns1:service name="Hesap" provider="java:RPC" style="document">
-  <ns1:parameter name="allowedMethods" value="*"/>
+ <ns1:service name="Hesap" provider="java:RPC" style="wrapped" use="literal">
+  <ns2:operation name="kkok" qname="ns1:kkok" returnQName="ns1:kkokReturn" returnType="xsd:double" soapAction="" xmlns:ns1="http://canias" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/">
+   <ns2:parameter qname="ns1:a" type="xsd:double"/>
+  </ns2:operation>
+  <ns1:parameter name="allowedMethods" value="kkok"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="Hesap"/>
   <ns1:parameter name="className" value="canias.Hesap"/>
   <ns1:parameter name="wsdlServicePort" value="Hesap"/>
+  <ns1:parameter name="schemaQualified" value="http://canias"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://canias"/>
   <ns1:parameter name="wsdlServiceElement" value="HesapService"/>
  </ns1:service>

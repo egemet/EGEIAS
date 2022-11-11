@@ -2,14 +2,18 @@
 
   <!-- Services from HesapService WSDL service -->
 
-  <service name="Hesap" provider="java:RPC" style="document" use="encoded">
+  <service name="Hesap" provider="java:RPC" style="wrapped" use="literal">
       <parameter name="wsdlTargetNamespace" value="http://canias"/>
       <parameter name="wsdlServiceElement" value="HesapService"/>
+      <parameter name="schemaQualified" value="http://canias"/>
       <parameter name="wsdlServicePort" value="Hesap"/>
       <parameter name="className" value="canias.Hesap"/>
       <parameter name="wsdlPortType" value="Hesap"/>
       <parameter name="typeMappingVersion" value="1.2"/>
-      <parameter name="allowedMethods" value="*"/>
+      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="kkok" qname="operNS:kkok" returnQName="retNS:kkokReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:a" type="tns:double"/>
+      </operation>
+      <parameter name="allowedMethods" value="kkok"/>
 
   </service>
 </deployment>
