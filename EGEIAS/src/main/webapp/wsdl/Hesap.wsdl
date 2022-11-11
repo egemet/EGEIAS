@@ -4,36 +4,6 @@
 Built on Apr 22, 2006 (06:55:48 PDT)-->
  <wsdl:types>
   <schema elementFormDefault="qualified" targetNamespace="http://canias" xmlns="http://www.w3.org/2001/XMLSchema">
-<<<<<<< HEAD
-   <element name="kkok">
-    <complexType>
-     <sequence>
-      <element name="a" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="kkokResponse">
-    <complexType>
-     <sequence>
-      <element name="kkokReturn" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-  </schema>
- </wsdl:types>
-
-   <wsdl:message name="kkokRequest">
-
-      <wsdl:part element="impl:kkok" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="kkokResponse">
-
-      <wsdl:part element="impl:kkokResponse" name="parameters">
-=======
    <element name="REFKAYMA">
     <complexType>
      <sequence>
@@ -436,7 +406,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <wsdl:message name="TVARYANSResponse">
 
       <wsdl:part element="impl:TVARYANSResponse" name="parameters">
->>>>>>> refs/remotes/origin/master
 
       </wsdl:part>
 
@@ -444,15 +413,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    <wsdl:portType name="Hesap">
 
-<<<<<<< HEAD
-      <wsdl:operation name="kkok">
-
-         <wsdl:input message="impl:kkokRequest" name="kkokRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:kkokResponse" name="kkokResponse">
-=======
       <wsdl:operation name="REFKAYMA">
 
          <wsdl:input message="impl:REFKAYMARequest" name="REFKAYMARequest">
@@ -604,7 +564,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
        </wsdl:input>
 
          <wsdl:output message="impl:mainResponse" name="mainResponse">
->>>>>>> refs/remotes/origin/master
 
        </wsdl:output>
 
@@ -616,19 +575,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 
-<<<<<<< HEAD
-      <wsdl:operation name="kkok">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="kkokRequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="kkokResponse">
-=======
       <wsdl:operation name="REFKAYMA">
 
          <wsdlsoap:operation soapAction=""/>
@@ -856,7 +802,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="mainResponse">
->>>>>>> refs/remotes/origin/master
 
             <wsdlsoap:body use="literal"/>
 
