@@ -29,10 +29,54 @@
   <ns1:namespace>http://xml.apache.org/axis/wsdd/</ns1:namespace>
  </ns1:service>
  <ns1:service name="Hesap" provider="java:RPC" style="wrapped" use="literal">
+<<<<<<< HEAD
   <ns2:operation name="kkok" qname="ns1:kkok" returnQName="ns1:kkokReturn" returnType="xsd:double" soapAction="" xmlns:ns1="http://canias" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/">
    <ns2:parameter qname="ns1:a" type="xsd:double"/>
   </ns2:operation>
   <ns1:parameter name="allowedMethods" value="kkok"/>
+=======
+  <ns2:operation name="REFKAYMA" qname="ns1:REFKAYMA" returnQName="ns1:REFKAYMAReturn" returnType="xsd:double" soapAction="" xmlns:ns1="http://canias" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/">
+   <ns2:parameter qname="ns1:bolen" type="xsd:double"/>
+  </ns2:operation>
+  <ns1:operation name="TEKRAR" qname="ns2:TEKRAR" returnQName="ns2:TEKRARReturn" returnType="xsd:double" soapAction="" xmlns:ns2="http://canias" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns2:bolen" type="xsd:double"/>
+  </ns1:operation>
+  <ns1:operation name="genisHesap" qname="ns3:genisHesap" returnQName="ns3:genisHesapReturn" returnType="ns3:GenisHesap" soapAction="" xmlns:ns3="http://canias">
+   <ns1:parameter qname="ns3:obhtype" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+   <ns1:parameter qname="ns3:obhno" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="OLCHATA" qname="ns4:OLCHATA" returnQName="ns4:OLCHATAReturn" returnType="xsd:double" soapAction="" xmlns:ns4="http://canias" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns4:bolen" type="xsd:double"/>
+  </ns1:operation>
+  <ns1:operation name="BIRLESHATA" qname="ns5:BIRLESHATA" returnQName="ns5:BIRLESHATAReturn" returnType="xsd:double" soapAction="" xmlns:ns5="http://canias" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns5:bolen" type="xsd:double"/>
+  </ns1:operation>
+  <ns1:operation name="SICFARKI" qname="ns6:SICFARKI" returnQName="ns6:SICFARKIReturn" returnType="xsd:double" soapAction="" xmlns:ns6="http://canias" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns6:bolen" type="xsd:double"/>
+  </ns1:operation>
+  <ns1:operation name="REFBEL" qname="ns7:REFBEL" returnQName="ns7:REFBELReturn" returnType="xsd:double" soapAction="" xmlns:ns7="http://canias" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns7:bolen" type="xsd:double"/>
+  </ns1:operation>
+  <ns1:operation name="TVARYANS" qname="ns8:TVARYANS" returnQName="ns8:TVARYANSReturn" returnType="xsd:double" soapAction="" xmlns:ns8="http://canias" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns8:degerler" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="SICFARKITESTREF" qname="ns9:SICFARKITESTREF" returnQName="ns9:SICFARKITESTREFReturn" returnType="xsd:double" soapAction="" xmlns:ns9="http://canias" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns9:bolen" type="xsd:double"/>
+  </ns1:operation>
+  <ns1:operation name="TESTOKUHATA" qname="ns10:TESTOKUHATA" returnQName="ns10:TESTOKUHATAReturn" returnType="xsd:double" soapAction="" xmlns:ns10="http://canias" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns10:bolen" type="xsd:double"/>
+  </ns1:operation>
+  <ns1:operation name="TESTSIFIR" qname="ns11:TESTSIFIR" returnQName="ns11:TESTSIFIRReturn" returnType="xsd:double" soapAction="" xmlns:ns11="http://canias" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns11:bolen" type="xsd:double"/>
+  </ns1:operation>
+  <ns1:operation name="dagilim" qname="ns12:dagilim" returnQName="ns12:dagilimReturn" returnType="xsd:double" soapAction="" xmlns:ns12="http://canias" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns12:dagilimname" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="main" qname="ns13:main" soapAction="" xmlns:ns13="http://canias">
+   <ns1:parameter qname="ns13:args" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="OLCHATA dagilim REFKAYMA SICFARKITESTREF main BIRLESHATA REFBEL TESTOKUHATA TEKRAR TVARYANS TESTSIFIR genisHesap SICFARKI"/>
+>>>>>>> refs/remotes/origin/master
   <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="Hesap"/>
   <ns1:parameter name="className" value="canias.Hesap"/>
@@ -40,6 +84,7 @@
   <ns1:parameter name="schemaQualified" value="http://canias"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://canias"/>
   <ns1:parameter name="wsdlServiceElement" value="HesapService"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns14:GenisHesap" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:canias.GenisHesap" xmlns:ns14="http://canias"/>
  </ns1:service>
  <ns1:service name="Version" provider="java:RPC">
   <ns1:parameter name="allowedMethods" value="getVersion"/>
