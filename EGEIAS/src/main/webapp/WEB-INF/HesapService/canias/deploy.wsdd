@@ -10,47 +10,47 @@
       <parameter name="className" value="canias.Hesap"/>
       <parameter name="wsdlPortType" value="Hesap"/>
       <parameter name="typeMappingVersion" value="1.2"/>
-      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="OLCHATA" qname="operNS:OLCHATA" returnQName="retNS:OLCHATAReturn" returnType="rtns:double" soapAction="">
-        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
-      </operation>
       <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="REFKAYMA" qname="operNS:REFKAYMA" returnQName="retNS:REFKAYMAReturn" returnType="rtns:double" soapAction="">
         <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
       </operation>
-      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="BIRLESHATA" qname="operNS:BIRLESHATA" returnQName="retNS:BIRLESHATAReturn" returnType="rtns:double" soapAction="">
-        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
-      </operation>
       <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="TEKRAR" qname="operNS:TEKRAR" returnQName="retNS:TEKRARReturn" returnType="rtns:double" soapAction="">
-        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
-      </operation>
-      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="SICFARKI" qname="operNS:SICFARKI" returnQName="retNS:SICFARKIReturn" returnType="rtns:double" soapAction="">
-        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
-      </operation>
-      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="dagilim" qname="operNS:dagilim" returnQName="retNS:dagilimReturn" returnType="rtns:double" soapAction="">
-        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:dagilimname" type="tns:string"/>
-      </operation>
-      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="TESTOKUHATA" qname="operNS:TESTOKUHATA" returnQName="retNS:TESTOKUHATAReturn" returnType="rtns:double" soapAction="">
-        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
-      </operation>
-      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="REFBEL" qname="operNS:REFBEL" returnQName="retNS:REFBELReturn" returnType="rtns:double" soapAction="">
-        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
-      </operation>
-      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="TESTSIFIR" qname="operNS:TESTSIFIR" returnQName="retNS:TESTSIFIRReturn" returnType="rtns:double" soapAction="">
-        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
-      </operation>
-      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="SICFARKITESTREF" qname="operNS:SICFARKITESTREF" returnQName="retNS:SICFARKITESTREFReturn" returnType="rtns:double" soapAction="">
         <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
       </operation>
       <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://canias" name="genisHesap" qname="operNS:genisHesap" returnQName="retNS:genisHesapReturn" returnType="rtns:GenisHesap" soapAction="">
         <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:obhtype" type="tns:string"/>
         <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:obhno" type="tns:string"/>
       </operation>
+      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="OLCHATA" qname="operNS:OLCHATA" returnQName="retNS:OLCHATAReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="BIRLESHATA" qname="operNS:BIRLESHATA" returnQName="retNS:BIRLESHATAReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="SICFARKI" qname="operNS:SICFARKI" returnQName="retNS:SICFARKIReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="REFBEL" qname="operNS:REFBEL" returnQName="retNS:REFBELReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
+      </operation>
       <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="TVARYANS" qname="operNS:TVARYANS" returnQName="retNS:TVARYANSReturn" returnType="rtns:double" soapAction="">
         <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:degerler" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="SICFARKITESTREF" qname="operNS:SICFARKITESTREF" returnQName="retNS:SICFARKITESTREFReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="TESTOKUHATA" qname="operNS:TESTOKUHATA" returnQName="retNS:TESTOKUHATAReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="TESTSIFIR" qname="operNS:TESTSIFIR" returnQName="retNS:TESTSIFIRReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bolen" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://canias" xmlns:retNS="http://canias" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="dagilim" qname="operNS:dagilim" returnQName="retNS:dagilimReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:dagilimname" type="tns:string"/>
       </operation>
       <operation xmlns:operNS="http://canias" name="main" qname="operNS:main" soapAction="">
         <parameter xmlns:pns="http://canias" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:args" type="tns:string"/>
       </operation>
-      <parameter name="allowedMethods" value="OLCHATA dagilim REFKAYMA SICFARKITESTREF main BIRLESHATA REFBEL TESTOKUHATA TEKRAR TESTSIFIR TVARYANS genisHesap SICFARKI"/>
+      <parameter name="allowedMethods" value="OLCHATA dagilim REFKAYMA SICFARKITESTREF main BIRLESHATA REFBEL TESTOKUHATA TEKRAR TVARYANS TESTSIFIR genisHesap SICFARKI"/>
 
       <typeMapping xmlns:ns="http://canias" qname="ns:GenisHesap" type="java:canias.GenisHesap" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
   </service>

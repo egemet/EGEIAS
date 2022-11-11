@@ -4,20 +4,6 @@
 Built on Apr 22, 2006 (06:55:48 PDT)-->
  <wsdl:types>
   <schema elementFormDefault="qualified" targetNamespace="http://canias" xmlns="http://www.w3.org/2001/XMLSchema">
-   <element name="OLCHATA">
-    <complexType>
-     <sequence>
-      <element name="bolen" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="OLCHATAResponse">
-    <complexType>
-     <sequence>
-      <element name="OLCHATAReturn" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
    <element name="REFKAYMA">
     <complexType>
      <sequence>
@@ -32,20 +18,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
-   <element name="BIRLESHATA">
-    <complexType>
-     <sequence>
-      <element name="bolen" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="BIRLESHATAResponse">
-    <complexType>
-     <sequence>
-      <element name="BIRLESHATAReturn" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
    <element name="TEKRAR">
     <complexType>
      <sequence>
@@ -57,90 +29,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
     <complexType>
      <sequence>
       <element name="TEKRARReturn" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="SICFARKI">
-    <complexType>
-     <sequence>
-      <element name="bolen" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="SICFARKIResponse">
-    <complexType>
-     <sequence>
-      <element name="SICFARKIReturn" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="dagilim">
-    <complexType>
-     <sequence>
-      <element name="dagilimname" type="xsd:string"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="dagilimResponse">
-    <complexType>
-     <sequence>
-      <element name="dagilimReturn" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="TESTOKUHATA">
-    <complexType>
-     <sequence>
-      <element name="bolen" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="TESTOKUHATAResponse">
-    <complexType>
-     <sequence>
-      <element name="TESTOKUHATAReturn" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="REFBEL">
-    <complexType>
-     <sequence>
-      <element name="bolen" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="REFBELResponse">
-    <complexType>
-     <sequence>
-      <element name="REFBELReturn" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="TESTSIFIR">
-    <complexType>
-     <sequence>
-      <element name="bolen" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="TESTSIFIRResponse">
-    <complexType>
-     <sequence>
-      <element name="TESTSIFIRReturn" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="SICFARKITESTREF">
-    <complexType>
-     <sequence>
-      <element name="bolen" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="SICFARKITESTREFResponse">
-    <complexType>
-     <sequence>
-      <element name="SICFARKITESTREFReturn" type="xsd:double"/>
      </sequence>
     </complexType>
    </element>
@@ -163,6 +51,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
     <sequence>
      <element name="BIRLESHATA" type="xsd:double"/>
      <element name="EXPUNCER" type="xsd:double"/>
+     <element name="HATAMESAJI" nillable="true" type="xsd:string"/>
      <element name="OLCHATA" type="xsd:double"/>
      <element name="REFBEL" type="xsd:double"/>
      <element name="REFKAYMA" type="xsd:double"/>
@@ -175,6 +64,62 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      <element name="TVARYANS" type="xsd:double"/>
     </sequence>
    </complexType>
+   <element name="OLCHATA">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="OLCHATAResponse">
+    <complexType>
+     <sequence>
+      <element name="OLCHATAReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="BIRLESHATA">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="BIRLESHATAResponse">
+    <complexType>
+     <sequence>
+      <element name="BIRLESHATAReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="SICFARKI">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="SICFARKIResponse">
+    <complexType>
+     <sequence>
+      <element name="SICFARKIReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="REFBEL">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="REFBELResponse">
+    <complexType>
+     <sequence>
+      <element name="REFBELReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
    <element name="TVARYANS">
     <complexType>
      <sequence>
@@ -186,6 +131,62 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
     <complexType>
      <sequence>
       <element name="TVARYANSReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="SICFARKITESTREF">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="SICFARKITESTREFResponse">
+    <complexType>
+     <sequence>
+      <element name="SICFARKITESTREFReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TESTOKUHATA">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TESTOKUHATAResponse">
+    <complexType>
+     <sequence>
+      <element name="TESTOKUHATAReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TESTSIFIR">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TESTSIFIRResponse">
+    <complexType>
+     <sequence>
+      <element name="TESTSIFIRReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="dagilim">
+    <complexType>
+     <sequence>
+      <element name="dagilimname" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="dagilimResponse">
+    <complexType>
+     <sequence>
+      <element name="dagilimReturn" type="xsd:double"/>
      </sequence>
     </complexType>
    </element>
@@ -242,17 +243,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:message name="TESTOKUHATAResponse">
+   <wsdl:message name="SICFARKITESTREFResponse">
 
-      <wsdl:part element="impl:TESTOKUHATAResponse" name="parameters">
+      <wsdl:part element="impl:SICFARKITESTREFResponse" name="parameters">
 
       </wsdl:part>
 
    </wsdl:message>
 
-   <wsdl:message name="SICFARKITESTREFResponse">
+   <wsdl:message name="TESTOKUHATAResponse">
 
-      <wsdl:part element="impl:SICFARKITESTREFResponse" name="parameters">
+      <wsdl:part element="impl:TESTOKUHATAResponse" name="parameters">
 
       </wsdl:part>
 
@@ -346,17 +347,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:message name="dagilimRequest">
+   <wsdl:message name="REFBELRequest">
 
-      <wsdl:part element="impl:dagilim" name="parameters">
+      <wsdl:part element="impl:REFBEL" name="parameters">
 
       </wsdl:part>
 
    </wsdl:message>
 
-   <wsdl:message name="REFBELRequest">
+   <wsdl:message name="dagilimRequest">
 
-      <wsdl:part element="impl:REFBEL" name="parameters">
+      <wsdl:part element="impl:dagilim" name="parameters">
 
       </wsdl:part>
 
@@ -412,18 +413,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    <wsdl:portType name="Hesap">
 
-      <wsdl:operation name="OLCHATA">
-
-         <wsdl:input message="impl:OLCHATARequest" name="OLCHATARequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:OLCHATAResponse" name="OLCHATAResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
       <wsdl:operation name="REFKAYMA">
 
          <wsdl:input message="impl:REFKAYMARequest" name="REFKAYMARequest">
@@ -431,18 +420,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
        </wsdl:input>
 
          <wsdl:output message="impl:REFKAYMAResponse" name="REFKAYMAResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="BIRLESHATA">
-
-         <wsdl:input message="impl:BIRLESHATARequest" name="BIRLESHATARequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:BIRLESHATAResponse" name="BIRLESHATAResponse">
 
        </wsdl:output>
 
@@ -460,6 +437,42 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="genisHesap">
+
+         <wsdl:input message="impl:genisHesapRequest" name="genisHesapRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:genisHesapResponse" name="genisHesapResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="OLCHATA">
+
+         <wsdl:input message="impl:OLCHATARequest" name="OLCHATARequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:OLCHATAResponse" name="OLCHATAResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="BIRLESHATA">
+
+         <wsdl:input message="impl:BIRLESHATARequest" name="BIRLESHATARequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:BIRLESHATAResponse" name="BIRLESHATAResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="SICFARKI">
 
          <wsdl:input message="impl:SICFARKIRequest" name="SICFARKIRequest">
@@ -467,30 +480,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
        </wsdl:input>
 
          <wsdl:output message="impl:SICFARKIResponse" name="SICFARKIResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="dagilim">
-
-         <wsdl:input message="impl:dagilimRequest" name="dagilimRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:dagilimResponse" name="dagilimResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="TESTOKUHATA">
-
-         <wsdl:input message="impl:TESTOKUHATARequest" name="TESTOKUHATARequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:TESTOKUHATAResponse" name="TESTOKUHATAResponse">
 
        </wsdl:output>
 
@@ -508,13 +497,13 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="TESTSIFIR">
+      <wsdl:operation name="TVARYANS">
 
-         <wsdl:input message="impl:TESTSIFIRRequest" name="TESTSIFIRRequest">
+         <wsdl:input message="impl:TVARYANSRequest" name="TVARYANSRequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:TESTSIFIRResponse" name="TESTSIFIRResponse">
+         <wsdl:output message="impl:TVARYANSResponse" name="TVARYANSResponse">
 
        </wsdl:output>
 
@@ -532,25 +521,37 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="genisHesap">
+      <wsdl:operation name="TESTOKUHATA">
 
-         <wsdl:input message="impl:genisHesapRequest" name="genisHesapRequest">
+         <wsdl:input message="impl:TESTOKUHATARequest" name="TESTOKUHATARequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:genisHesapResponse" name="genisHesapResponse">
+         <wsdl:output message="impl:TESTOKUHATAResponse" name="TESTOKUHATAResponse">
 
        </wsdl:output>
 
       </wsdl:operation>
 
-      <wsdl:operation name="TVARYANS">
+      <wsdl:operation name="TESTSIFIR">
 
-         <wsdl:input message="impl:TVARYANSRequest" name="TVARYANSRequest">
+         <wsdl:input message="impl:TESTSIFIRRequest" name="TESTSIFIRRequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:TVARYANSResponse" name="TVARYANSResponse">
+         <wsdl:output message="impl:TESTSIFIRResponse" name="TESTSIFIRResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="dagilim">
+
+         <wsdl:input message="impl:dagilimRequest" name="dagilimRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:dagilimResponse" name="dagilimResponse">
 
        </wsdl:output>
 
@@ -574,24 +575,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 
-      <wsdl:operation name="OLCHATA">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="OLCHATARequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="OLCHATAResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
       <wsdl:operation name="REFKAYMA">
 
          <wsdlsoap:operation soapAction=""/>
@@ -603,24 +586,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="REFKAYMAResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="BIRLESHATA">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="BIRLESHATARequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="BIRLESHATAResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -646,6 +611,60 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="genisHesap">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="genisHesapRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="genisHesapResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="OLCHATA">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="OLCHATARequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="OLCHATAResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="BIRLESHATA">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="BIRLESHATARequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="BIRLESHATAResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="SICFARKI">
 
          <wsdlsoap:operation soapAction=""/>
@@ -657,42 +676,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="SICFARKIResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="dagilim">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="dagilimRequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="dagilimResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="TESTOKUHATA">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="TESTOKUHATARequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="TESTOKUHATAResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -718,17 +701,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="TESTSIFIR">
+      <wsdl:operation name="TVARYANS">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="TESTSIFIRRequest">
+         <wsdl:input name="TVARYANSRequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="TESTSIFIRResponse">
+         <wsdl:output name="TVARYANSResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -754,17 +737,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="genisHesap">
+      <wsdl:operation name="TESTOKUHATA">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="genisHesapRequest">
+         <wsdl:input name="TESTOKUHATARequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="genisHesapResponse">
+         <wsdl:output name="TESTOKUHATAResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -772,17 +755,35 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="TVARYANS">
+      <wsdl:operation name="TESTSIFIR">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="TVARYANSRequest">
+         <wsdl:input name="TESTSIFIRRequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="TVARYANSResponse">
+         <wsdl:output name="TESTSIFIRResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="dagilim">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="dagilimRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="dagilimResponse">
 
             <wsdlsoap:body use="literal"/>
 
