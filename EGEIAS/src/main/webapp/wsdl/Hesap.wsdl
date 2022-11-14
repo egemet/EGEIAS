@@ -4,66 +4,44 @@
 Built on Apr 22, 2006 (06:55:48 PDT)-->
  <wsdl:types>
   <schema elementFormDefault="qualified" targetNamespace="http://canias" xmlns="http://www.w3.org/2001/XMLSchema">
-   <element name="REFKAYMA">
+   <element name="main">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="args" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="mainResponse">
+    <complexType/>
+   </element>
+   <element name="anlamliBasamak">
+    <complexType>
+     <sequence>
+      <element name="d" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="anlamliBasamakResponse">
+    <complexType>
+     <sequence>
+      <element name="anlamliBasamakReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="REFBEL">
     <complexType>
      <sequence>
       <element name="bolen" type="xsd:double"/>
      </sequence>
     </complexType>
    </element>
-   <element name="REFKAYMAResponse">
+   <element name="REFBELResponse">
     <complexType>
      <sequence>
-      <element name="REFKAYMAReturn" type="xsd:double"/>
+      <element name="REFBELReturn" type="xsd:double"/>
      </sequence>
     </complexType>
    </element>
-   <element name="TEKRAR">
-    <complexType>
-     <sequence>
-      <element name="bolen" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="TEKRARResponse">
-    <complexType>
-     <sequence>
-      <element name="TEKRARReturn" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="genisHesap">
-    <complexType>
-     <sequence>
-      <element name="obhtype" type="xsd:string"/>
-      <element name="obhno" type="xsd:string"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="genisHesapResponse">
-    <complexType>
-     <sequence>
-      <element name="genisHesapReturn" type="impl:GenisHesap"/>
-     </sequence>
-    </complexType>
-   </element>
-   <complexType name="GenisHesap">
-    <sequence>
-     <element name="BIRLESHATA" type="xsd:double"/>
-     <element name="EXPUNCER" type="xsd:double"/>
-     <element name="HATAMESAJI" nillable="true" type="xsd:string"/>
-     <element name="OLCHATA" type="xsd:double"/>
-     <element name="REFBEL" type="xsd:double"/>
-     <element name="REFKAYMA" type="xsd:double"/>
-     <element name="SICFARKI" type="xsd:double"/>
-     <element name="SICFARKITESTREF" type="xsd:double"/>
-     <element name="STDUNCER" type="xsd:double"/>
-     <element name="TEKRAR" type="xsd:double"/>
-     <element name="TESTOKUHATA" type="xsd:double"/>
-     <element name="TESTSIFIR" type="xsd:double"/>
-     <element name="TVARYANS" type="xsd:double"/>
-    </sequence>
-   </complexType>
    <element name="OLCHATA">
     <complexType>
      <sequence>
@@ -92,6 +70,34 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
+   <element name="REFKAYMA">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="REFKAYMAResponse">
+    <complexType>
+     <sequence>
+      <element name="REFKAYMAReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TEKRAR">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TEKRARResponse">
+    <complexType>
+     <sequence>
+      <element name="TEKRARReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
    <element name="SICFARKI">
     <complexType>
      <sequence>
@@ -103,34 +109,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
     <complexType>
      <sequence>
       <element name="SICFARKIReturn" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="REFBEL">
-    <complexType>
-     <sequence>
-      <element name="bolen" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="REFBELResponse">
-    <complexType>
-     <sequence>
-      <element name="REFBELReturn" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="TVARYANS">
-    <complexType>
-     <sequence>
-      <element name="degerler" type="xsd:string"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="TVARYANSResponse">
-    <complexType>
-     <sequence>
-      <element name="TVARYANSReturn" type="xsd:double"/>
      </sequence>
     </complexType>
    </element>
@@ -148,20 +126,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
-   <element name="TESTOKUHATA">
-    <complexType>
-     <sequence>
-      <element name="bolen" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="TESTOKUHATAResponse">
-    <complexType>
-     <sequence>
-      <element name="TESTOKUHATAReturn" type="xsd:double"/>
-     </sequence>
-    </complexType>
-   </element>
    <element name="TESTSIFIR">
     <complexType>
      <sequence>
@@ -176,6 +140,67 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
+   <element name="TESTOKUHATA">
+    <complexType>
+     <sequence>
+      <element name="bolen" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TESTOKUHATAResponse">
+    <complexType>
+     <sequence>
+      <element name="TESTOKUHATAReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TVARYANS">
+    <complexType>
+     <sequence>
+      <element name="degerler" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="TVARYANSResponse">
+    <complexType>
+     <sequence>
+      <element name="TVARYANSReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="genisHesap">
+    <complexType>
+     <sequence>
+      <element name="obhtype" type="xsd:string"/>
+      <element name="obhno" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="genisHesapResponse">
+    <complexType>
+     <sequence>
+      <element name="genisHesapReturn" type="impl:GenisHesap"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="GenisHesap">
+    <sequence>
+     <element name="BIRLESHATA" type="xsd:double"/>
+     <element name="EXPUNCER" type="xsd:double"/>
+     <element name="EXPUNCER2" nillable="true" type="xsd:string"/>
+     <element name="HATAMESAJI" nillable="true" type="xsd:string"/>
+     <element name="OLCHATA" type="xsd:double"/>
+     <element name="REFBEL" type="xsd:double"/>
+     <element name="REFKAYMA" type="xsd:double"/>
+     <element name="SICFARKI" type="xsd:double"/>
+     <element name="SICFARKITESTREF" type="xsd:double"/>
+     <element name="STDUNCER" type="xsd:double"/>
+     <element name="TEKRAR" type="xsd:double"/>
+     <element name="TESTOKUHATA" type="xsd:double"/>
+     <element name="TESTSIFIR" type="xsd:double"/>
+     <element name="TVARYANS" type="xsd:double"/>
+    </sequence>
+   </complexType>
    <element name="dagilim">
     <complexType>
      <sequence>
@@ -190,22 +215,42 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
-   <element name="main">
+   <element name="basamakSayisi">
     <complexType>
      <sequence>
-      <element maxOccurs="unbounded" name="args" type="xsd:string"/>
+      <element name="sayi" type="xsd:int"/>
      </sequence>
     </complexType>
    </element>
-   <element name="mainResponse">
-    <complexType/>
+   <element name="basamakSayisiResponse">
+    <complexType>
+     <sequence>
+      <element name="basamakSayisiReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
    </element>
   </schema>
  </wsdl:types>
 
+   <wsdl:message name="anlamliBasamakRequest">
+
+      <wsdl:part element="impl:anlamliBasamak" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
    <wsdl:message name="SICFARKITESTREFRequest">
 
       <wsdl:part element="impl:SICFARKITESTREF" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="basamakSayisiRequest">
+
+      <wsdl:part element="impl:basamakSayisi" name="parameters">
 
       </wsdl:part>
 
@@ -259,17 +304,25 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:message name="SICFARKIResponse">
+   <wsdl:message name="mainRequest">
 
-      <wsdl:part element="impl:SICFARKIResponse" name="parameters">
+      <wsdl:part element="impl:main" name="parameters">
 
       </wsdl:part>
 
    </wsdl:message>
 
-   <wsdl:message name="mainRequest">
+   <wsdl:message name="anlamliBasamakResponse">
 
-      <wsdl:part element="impl:main" name="parameters">
+      <wsdl:part element="impl:anlamliBasamakResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="SICFARKIResponse">
+
+      <wsdl:part element="impl:SICFARKIResponse" name="parameters">
 
       </wsdl:part>
 
@@ -286,6 +339,14 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <wsdl:message name="dagilimResponse">
 
       <wsdl:part element="impl:dagilimResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="basamakSayisiResponse">
+
+      <wsdl:part element="impl:basamakSayisiResponse" name="parameters">
 
       </wsdl:part>
 
@@ -371,17 +432,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:message name="TESTSIFIRResponse">
+   <wsdl:message name="mainResponse">
 
-      <wsdl:part element="impl:TESTSIFIRResponse" name="parameters">
+      <wsdl:part element="impl:mainResponse" name="parameters">
 
       </wsdl:part>
 
    </wsdl:message>
 
-   <wsdl:message name="mainResponse">
+   <wsdl:message name="TESTSIFIRResponse">
 
-      <wsdl:part element="impl:mainResponse" name="parameters">
+      <wsdl:part element="impl:TESTSIFIRResponse" name="parameters">
 
       </wsdl:part>
 
@@ -413,37 +474,37 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    <wsdl:portType name="Hesap">
 
-      <wsdl:operation name="REFKAYMA">
+      <wsdl:operation name="main">
 
-         <wsdl:input message="impl:REFKAYMARequest" name="REFKAYMARequest">
+         <wsdl:input message="impl:mainRequest" name="mainRequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:REFKAYMAResponse" name="REFKAYMAResponse">
+         <wsdl:output message="impl:mainResponse" name="mainResponse">
 
        </wsdl:output>
 
       </wsdl:operation>
 
-      <wsdl:operation name="TEKRAR">
+      <wsdl:operation name="anlamliBasamak">
 
-         <wsdl:input message="impl:TEKRARRequest" name="TEKRARRequest">
+         <wsdl:input message="impl:anlamliBasamakRequest" name="anlamliBasamakRequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:TEKRARResponse" name="TEKRARResponse">
+         <wsdl:output message="impl:anlamliBasamakResponse" name="anlamliBasamakResponse">
 
        </wsdl:output>
 
       </wsdl:operation>
 
-      <wsdl:operation name="genisHesap">
+      <wsdl:operation name="REFBEL">
 
-         <wsdl:input message="impl:genisHesapRequest" name="genisHesapRequest">
+         <wsdl:input message="impl:REFBELRequest" name="REFBELRequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:genisHesapResponse" name="genisHesapResponse">
+         <wsdl:output message="impl:REFBELResponse" name="REFBELResponse">
 
        </wsdl:output>
 
@@ -473,6 +534,30 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="REFKAYMA">
+
+         <wsdl:input message="impl:REFKAYMARequest" name="REFKAYMARequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:REFKAYMAResponse" name="REFKAYMAResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="TEKRAR">
+
+         <wsdl:input message="impl:TEKRARRequest" name="TEKRARRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:TEKRARResponse" name="TEKRARResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="SICFARKI">
 
          <wsdl:input message="impl:SICFARKIRequest" name="SICFARKIRequest">
@@ -480,30 +565,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
        </wsdl:input>
 
          <wsdl:output message="impl:SICFARKIResponse" name="SICFARKIResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="REFBEL">
-
-         <wsdl:input message="impl:REFBELRequest" name="REFBELRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:REFBELResponse" name="REFBELResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="TVARYANS">
-
-         <wsdl:input message="impl:TVARYANSRequest" name="TVARYANSRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:TVARYANSResponse" name="TVARYANSResponse">
 
        </wsdl:output>
 
@@ -521,6 +582,18 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="TESTSIFIR">
+
+         <wsdl:input message="impl:TESTSIFIRRequest" name="TESTSIFIRRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:TESTSIFIRResponse" name="TESTSIFIRResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="TESTOKUHATA">
 
          <wsdl:input message="impl:TESTOKUHATARequest" name="TESTOKUHATARequest">
@@ -533,13 +606,25 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="TESTSIFIR">
+      <wsdl:operation name="TVARYANS">
 
-         <wsdl:input message="impl:TESTSIFIRRequest" name="TESTSIFIRRequest">
+         <wsdl:input message="impl:TVARYANSRequest" name="TVARYANSRequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:TESTSIFIRResponse" name="TESTSIFIRResponse">
+         <wsdl:output message="impl:TVARYANSResponse" name="TVARYANSResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="genisHesap">
+
+         <wsdl:input message="impl:genisHesapRequest" name="genisHesapRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:genisHesapResponse" name="genisHesapResponse">
 
        </wsdl:output>
 
@@ -557,13 +642,13 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="main">
+      <wsdl:operation name="basamakSayisi">
 
-         <wsdl:input message="impl:mainRequest" name="mainRequest">
+         <wsdl:input message="impl:basamakSayisiRequest" name="basamakSayisiRequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:mainResponse" name="mainResponse">
+         <wsdl:output message="impl:basamakSayisiResponse" name="basamakSayisiResponse">
 
        </wsdl:output>
 
@@ -575,17 +660,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 
-      <wsdl:operation name="REFKAYMA">
+      <wsdl:operation name="main">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="REFKAYMARequest">
+         <wsdl:input name="mainRequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="REFKAYMAResponse">
+         <wsdl:output name="mainResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -593,17 +678,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="TEKRAR">
+      <wsdl:operation name="anlamliBasamak">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="TEKRARRequest">
+         <wsdl:input name="anlamliBasamakRequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="TEKRARResponse">
+         <wsdl:output name="anlamliBasamakResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -611,17 +696,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="genisHesap">
+      <wsdl:operation name="REFBEL">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="genisHesapRequest">
+         <wsdl:input name="REFBELRequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="genisHesapResponse">
+         <wsdl:output name="REFBELResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -665,6 +750,42 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="REFKAYMA">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="REFKAYMARequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="REFKAYMAResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="TEKRAR">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="TEKRARRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="TEKRARResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="SICFARKI">
 
          <wsdlsoap:operation soapAction=""/>
@@ -676,42 +797,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="SICFARKIResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="REFBEL">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="REFBELRequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="REFBELResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="TVARYANS">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="TVARYANSRequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="TVARYANSResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -737,6 +822,24 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="TESTSIFIR">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="TESTSIFIRRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="TESTSIFIRResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="TESTOKUHATA">
 
          <wsdlsoap:operation soapAction=""/>
@@ -755,17 +858,35 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="TESTSIFIR">
+      <wsdl:operation name="TVARYANS">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="TESTSIFIRRequest">
+         <wsdl:input name="TVARYANSRequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="TESTSIFIRResponse">
+         <wsdl:output name="TVARYANSResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="genisHesap">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="genisHesapRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="genisHesapResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -791,17 +912,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="main">
+      <wsdl:operation name="basamakSayisi">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="mainRequest">
+         <wsdl:input name="basamakSayisiRequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="mainResponse">
+         <wsdl:output name="basamakSayisiResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -815,7 +936,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       <wsdl:port binding="impl:HesapSoapBinding" name="Hesap">
 
-         <wsdlsoap:address location="http://portal.egemet.com.tr/EGEIAS/services/Hesap"/>
+         <wsdlsoap:address location="http://localhost:8080/EGEIAS/services/Hesap"/>
 
       </wsdl:port>
 

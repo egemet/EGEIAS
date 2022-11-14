@@ -2,6 +2,8 @@ package canias;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.math.BigDecimal;
+import java.math.MathContext;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -12,7 +14,28 @@ import java.util.ArrayList;
 public class Hesap {
   public static void main(String[] args) throws ClassNotFoundException, SQLException, NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException, InvocationTargetException { 
 	
-	System.out.println(genisHesap("1","1"));
+//	System.out.println(genisHesap("1","1"));
+
+	  System.out.println(anlamliBasamak(100.245));
+	  System.out.println(anlamliBasamak(0.245));
+	  System.out.println(anlamliBasamak(0.00245));
+	  System.out.println(anlamliBasamak(0.04051));
+	  System.out.println(anlamliBasamak(2345.09));
+	  System.out.println(anlamliBasamak(24.8514));
+	  System.out.println(anlamliBasamak(100.0023));
+	  
+	  System.out.println(anlamliBasamak(0.299));
+	 
+	  
+	  
+//	  System.out.println(anlamliBasamak(11.02302));
+//	  System.out.println(anlamliBasamak(11.52));
+//	  System.out.println(anlamliBasamak(0.02302));
+//	  System.out.println(anlamliBasamak(0.002));
+//	  System.out.println(anlamliBasamak(11125.02302));
+//	  System.out.println(anlamliBasamak(11.02302));
+//	  System.out.println(anlamliBasamak(-0.407302));
+//	  System.out.println(anlamliBasamak(-0.402302));
 	
   }
   
@@ -191,7 +214,7 @@ public class Hesap {
 		
 		double toplam = 0;
 		
-		query = "select E4.*,E2.DAGILIMNAME,E2.BOLEN from EGMOBHT004 E4 JOIN EGMOBHT002 E2 ON E4.DAGILIM = E2.DAGILIMNO  where E4.OBHTYPE="+obhtype+" and E4.OBHNO = "+obhno+" and E4.RCODE not in ('TVARYANS','STDUNCER','EXPUNCER') ";
+		query = "select E4.*,E2.DAGILIMNAME,E2.BOLEN from EGMOBHT004 E4 JOIN EGMOBHT002 E2 ON E4.DAGILIM = E2.DAGILIMNO  where E4.OBHTYPE="+obhtype+" and E4.OBHNO = "+obhno+" and E4.RCODE not in ('TVARYANS','STDUNCER','EXPUNCER','EXPUNCER2') ";
 		rs = st.executeQuery(query);
 		while(rs.next()) {
 				
@@ -218,7 +241,8 @@ public class Hesap {
 		
 		nesne.TVARYANS = toplam;
 		nesne.STDUNCER = Math.sqrt(toplam);
-		nesne.EXPUNCER=nesne.STDUNCER * 2;
+		nesne.EXPUNCER = nesne.STDUNCER * 2;
+		nesne.EXPUNCER2 = anlamliBasamak(nesne.EXPUNCER);
 		
 		System.out.println(	nesne.TVARYANS+"\n"+nesne.STDUNCER+"\n"+nesne.EXPUNCER);
 		
@@ -253,8 +277,86 @@ public class Hesap {
 		
 return bolen;
 }
+	public static String anlamliBasamak(double d) {
+		
+//		int sign_fig = 3;
+		int sign_fig = basamakSayisi((int) Math.floor(d));
+		if(sign_fig<2) {
+			sign_fig = 2;
+		}else {
+			sign_fig+=2;
+		}
+		
+		BigDecimal bd = new BigDecimal(d);
+		bd = bd.round(new MathContext(sign_fig));
+		double rounded = bd.doubleValue();
+		
+		int int_sonuc = 0;
+		int_sonuc = (int) rounded;
+		String sonuc = "";
+		if(int_sonuc==rounded) {
+			sonuc = int_sonuc+"";
+		}else {
+			sonuc = rounded+"";
+		}
+		
+		sonuc = sonuc.replace('.', '#');
+		if(sonuc.split("#").length>1) {
+			if(sonuc.split("#")[1].length()==1 && sonuc.split("#")[0].equals("0")) {
+				sonuc =sonuc + "0";
+			}
+		}
+		sonuc = sonuc.replaceAll("#", ".");
+
+//		 System.out.println(toPrecision(a, 2));
+		
+		return sonuc;
+	}
+	private static BigDecimal toPrecision(BigDecimal dec, int precision) {
+	    String plain = dec.movePointRight(precision).toPlainString();
+	    return new BigDecimal(plain.substring(0, plain.indexOf("."))).movePointLeft(precision);
+	}
+	public static int basamakSayisi(int sayi){
+		int sayac = 0;   
+		while(sayi > 0 || sayi < 0 ) {
+	            sayi /= 10; 
+	            sayac++;
+	        }
+		return sayac;
+	}
 	
-	
+	static String Round_off(double N, double n)
+    {
+        int h;
+        double l, a, b, c, d, e, i, j, m, f, g;
+        b = N;
+        c = Math.floor(N);
+        
+        System.out.println(c);
+ 
+        // Counting the no. of digits to the left of decimal point
+        // in the given no.
+        for (i = 0; b >= 1; ++i)
+            b = b / 10;
+ 
+        d = n - i;
+        b = N;
+        b = b * Math.pow(10, d);
+        e = b + 0.5;
+        if ((float)e == (float)Math.ceil(b)) {
+            f = (Math.ceil(b));
+            h = (int)(f - 2);
+            if (h % 2 != 0) {
+                e = e - 1;
+            }
+        }
+        j = Math.floor(e);
+        m = Math.pow(10, d);
+        j = j / m;
+        System.out.println("The number after rounding-off is "
+                           + j);
+        return j+"";
+    }
 	
 }
 

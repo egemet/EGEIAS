@@ -14,14 +14,17 @@ public class GenisHesap {
 	public double TVARYANS;
 	public double STDUNCER;
 	public double EXPUNCER;
+	public String EXPUNCER2;
 	public String HATAMESAJI;
 	
 	
 	
 	public GenisHesap(){}
-	public GenisHesap(double refbel,double olchata,double birleshata,double refkayma,double tekrar,double sicfarki,double sicfarkitestref,double testsifir,double testokuhata,double tvaryans,double stduncer,double expuncer,String hatamesaji) {
+	public GenisHesap(double refbel,double olchata,double birleshata,double refkayma,double tekrar,double sicfarki,double sicfarkitestref,double testsifir,double testokuhata,
+			double tvaryans,double stduncer,double expuncer,String expuncer2,String hatamesaji) {
 		this.BIRLESHATA=birleshata;
 		this.EXPUNCER=expuncer;
+		this.EXPUNCER2 = expuncer2;
 		this.OLCHATA=olchata;
 		this.REFBEL = refbel;
 		this.REFKAYMA = refkayma;
@@ -112,6 +115,12 @@ public class GenisHesap {
 	}
 	public void setEXPUNCER(double eXPUNCER) {
 		EXPUNCER = eXPUNCER;
+	}
+	public String getEXPUNCER2() {
+		return EXPUNCER2;
+	}
+	public void setEXPUNCER2(String eXPUNCER2) {
+		EXPUNCER2 = eXPUNCER2;
 	}
 
 	
